@@ -30,7 +30,7 @@ button {
 }
 
 /* Common */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -42,7 +42,7 @@ body {
   display: block;
   text-align: right;
 }
-.top-block img {
+.top-block .img {
   width: 100%;
 }
 .top-block .more {
@@ -63,7 +63,7 @@ body {
   margin: 0 auto 0;
 }
 
-h3 {
+.block-title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -83,34 +83,45 @@ h3 {
 .task + .task {
   border-top: 1px solid #eee;
 }
-.task-name {
+.task-check {
+  margin: 0 10px;
+}
+.task-text,
+.task-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-input.task-name {
-  margin: 0;
+.task-text {
+  padding-left: 10px;
+  box-sizing: border-box;
   font-size: 18px;
-  line-height: 18px;
+  width: 226px;
+}
+.task-input {
+  width: 226px;
   height: 21px;
+  margin: 0;
   padding: 0 9px;
   border: 1px solid #ddd;
-  background: #fff;
   border-radius: 6px;
   font-family: inherit;
+  font-size: 18px;
+  line-height: 18px;
+  background: #fff;
   color: #888;
 }
-input.task-name:focus {
+.task-input:focus {
   color: #333;
 }
-button {
+.btn {
   color: #888;
   font-size: 15px;
   width: 60px;
   font-family: inherit;
   cursor: pointer;
 }
-button:hover {
+.btn:hover {
   color: #3a3a3a;
 }
 .ico-delete {
@@ -121,43 +132,27 @@ button:hover {
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete:hover .ico-delete {
+.btn:hover .ico-delete {
   transform: rotateZ(0);
 }
 
-/* New Task */
-input#new-task {
+/* New task */
+.new-task .task-input {
   width: 318px;
 }
 
-/* Task list */
-li > input[type="checkbox"] {
-  margin: 0 10px;
-}
-li > div.task-name {
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  width: 226px;
-}
-li > input.task-name {
-  width: 226px;
-}
-
-/* Completed */
-ul#completed-tasks div.task-name {
+/* Completed tasks */
+#completed-tasks .task-text {
   text-decoration: line-through;
   color: #888;
 }
 
-/* Edit Task */
-ul li input.task-name {
+/* Edited task */
+.task-list .task-input,
+.task-list .edit-mode > .task-text {
   display: none;
 }
-ul li.edit-mode input.task-name {
+.task-list .edit-mode > .task-input {
   display: inline-block;
   width: 224px;
-}
-ul li.edit-mode div.task-name {
-  display: none;
 }
