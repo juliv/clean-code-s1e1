@@ -8,49 +8,49 @@
 <body class="body">
 
   <header class="top-block">
-    <img src="./eisenhower-matrix.jpg" alt="The Eisenhower matrix" class="img">
-    <a class="more" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    <img src="./eisenhower-matrix.jpg" alt="The Eisenhower matrix" class="top-block__img">
+    <a class="top-block__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
   </header>
 
   <main class="wrapper">
 
-    <section class="new-task">
-      <h3 class="block-title"><label for="new-task">Add Item</label></h3>
+    <section class="tasks tasks_new">
+      <h3 class="tasks__title"><label for="new-task">Add Item</label></h3>
       <div class="task">
-        <input id="new-task" class="task-input" type="text">
-        <button class="btn btn-add">Add</button>
+        <input type="text" class="task__input task__input_new" id="new-task">
+        <button class="btn btn_add">Add</button>
       </div>
     </section>
 
-    <section class="tasks-todo">
-      <h3 class="block-title">Todo</h3>
-      <ul class="task-list" id="incomplete-tasks">
+    <section class="tasks tasks_todo">
+      <h3 class="tasks__title">Todo</h3>
+      <ul class="tasks__list" id="tasks_todo">
         <li class="task">
-          <input type="checkbox" class="task-check" aria-hidden="true" aria-label="">
-          <div class="task-text">Pay Bills</div>
-          <input type="text" class="task-input">
-          <button class="btn btn-edit">Edit</button>
-          <button class="btn btn-delete" aria-label="Delete"><span class="ico-delete"></span></button>
+          <input type="checkbox" class="task__check" aria-hidden="true" aria-label="">
+          <div class="task__text">Pay Bills</div>
+          <input type="text" class="task__input">
+          <button class="btn btn_edit">Edit</button>
+          <button class="btn btn_delete" aria-label="Delete"><span class="ico ico_delete"></span></button>
         </li>
-        <li class="task edit-mode">
-          <input type="checkbox" class="task-check" aria-hidden="true" aria-label="">
-          <div class="task-text">Go Shopping</div>
-          <input type="text" value="Go Shopping" class="task-input">
-          <button class="btn btn-edit">Save</button>
-          <button class="btn btn-delete" aria-label="Delete"><span class="ico-delete"></span></button>
+        <li class="task task_edited">
+          <input type="checkbox" class="task__check" aria-hidden="true" aria-label="">
+          <div class="task__text">Go Shopping</div>
+          <input type="text" value="Go Shopping" class="task__input">
+          <button class="btn btn_edit">Save</button>
+          <button class="btn btn_delete" aria-label="Delete"><span class="ico ico_delete"></span></button>
         </li>
       </ul>
     </section>
 
-    <section class="tasks-completed">
-      <h3 class="block-title">Completed</h3>
-      <ul class="task-list" id="completed-tasks">
+    <section class="tasks tasks_completed">
+      <h3 class="tasks__title">Completed</h3>
+      <ul class="tasks__list" id="tasks_completed">
         <li class="task">
-          <input type="checkbox" class="task-check" aria-hidden="true" aria-label="" checked>
-          <div class="task-text">See the Doctor</div>
-          <input type="text" class="task-input">
-          <button class="btn btn-edit">Edit</button>
-          <button class="btn btn-delete" aria-label="Delete"><span class="ico-delete"></span></button>
+          <input type="checkbox" class="task__check" aria-hidden="true" aria-label="" checked>
+          <div class="task__text">See the Doctor</div>
+          <input type="text" class="task__input">
+          <button class="btn btn_edit">Edit</button>
+          <button class="btn btn_delete" aria-label="Delete"><span class="ico ico_delete"></span></button>
         </li>
       </ul>
     </section>
