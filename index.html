@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Todo App</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" media="screen" charset="utf-8">
+  <link href="style.css" rel="stylesheet" media="screen">
 </head>
 <body class="body">
 
@@ -26,14 +26,14 @@
       <h3 class="block-title">Todo</h3>
       <ul class="task-list" id="incomplete-tasks">
         <li class="task">
-          <input type="checkbox" class="task-check">
+          <input type="checkbox" class="task-check" aria-hidden="true" aria-label="">
           <div class="task-text">Pay Bills</div>
           <input type="text" class="task-input">
           <button class="btn btn-edit">Edit</button>
           <button class="btn btn-delete" aria-label="Delete"><span class="ico-delete"></span></button>
         </li>
         <li class="task edit-mode">
-          <input type="checkbox" class="task-check">
+          <input type="checkbox" class="task-check" aria-hidden="true" aria-label="">
           <div class="task-text">Go Shopping</div>
           <input type="text" value="Go Shopping" class="task-input">
           <button class="btn btn-edit">Save</button>
@@ -46,7 +46,7 @@
       <h3 class="block-title">Completed</h3>
       <ul class="task-list" id="completed-tasks">
         <li class="task">
-          <input type="checkbox" class="task-check" checked>
+          <input type="checkbox" class="task-check" aria-hidden="true" aria-label="" checked>
           <div class="task-text">See the Doctor</div>
           <input type="text" class="task-input">
           <button class="btn btn-edit">Edit</button>

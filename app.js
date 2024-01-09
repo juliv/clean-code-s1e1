@@ -40,6 +40,8 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     checkBox.className="task-check";
+    checkBox.setAttribute("aria-label", "");
+    checkBox.setAttribute("aria-hidden", "true");
     editInput.type="text";
     editInput.className="task-input";
 
