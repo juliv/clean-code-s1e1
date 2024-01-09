@@ -22,7 +22,7 @@ var createNewTaskElement=function(taskString){
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
-    var label=document.createElement("label");//label
+    var label=document.createElement("div");//label
     //input (text)
     var editInput=document.createElement("input");//text
     //button.edit
@@ -30,7 +30,7 @@ var createNewTaskElement=function(taskString){
 
     //button.delete
     var deleteButton=document.createElement("button");//delete button
-    var deleteButtonImg=document.createElement("img");//delete button image
+    var deleteButtonImg=document.createElement("span");//delete button image
 
     listItem.className="task";
 
@@ -46,7 +46,8 @@ var createNewTaskElement=function(taskString){
     editButton.className="edit";
 
     deleteButton.className="delete";
-    deleteButtonImg.src="./remove.svg";
+    deleteButton.setAttribute("aria-label", "Delete");
+    deleteButtonImg.className="ico-delete";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -84,8 +85,8 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var editInput=listItem.querySelector('input.task-name');
+    var label=listItem.querySelector("div.task-name");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
